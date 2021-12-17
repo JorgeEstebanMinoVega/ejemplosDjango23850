@@ -4,11 +4,16 @@ from AppCoder import views
 
 urlpatterns = [
     
-    path('inicio', views.inicio),
-    path('jugador', views.jugador),
-    path('profesor', views.profesor),
-    path('jugadores', views.jugadores),
-
+    path('inicio', views.inicio, name="Inicio"),
+    path('curso', views.curso, name="Curso"),
+    path('profesor', views.profesor, name="Profesor"),
+    path('estudiante', views.estudiante, name="Estudiante"),
+    path('cantidadEstudiantes', views.cantidadEstudiantes, name="CantidadEstudiantes"),
+    path('cursoFormulario', views.cursoFormulario, name="CursoFormulario"),
+    path('estudianteFormulario', views.estudianteFormulario, name="estudianteFormulario"),
+    path('profesorFormulario', views.profesorFormulario, name="ProfesorFormulario"),
+    path('cantidadEstuFormulario', views.cantidadEstuFormulario, name="CantidadEstuFormulario"),
+    
 
 
 

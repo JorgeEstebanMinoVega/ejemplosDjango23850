@@ -1,0 +1,36 @@
+
+
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+    {% block contenido2 %}
+
+        <h1 class="mx-auto my-0 text-lowcase">Formulario del Curso</h1>
+
+    {% endblock %}
+
+    {% block contenido %}
+
+
+        {% if miFormulario.errors %}
+
+        <p style="color: red;"> Los datos ingresados no son correctos</p>
+
+        {% endif %}
+
+
+        <form action="/AppCoder/cursoFormulario" method="POST"> {% csrf_token %}
+
+            <table>
+
+                {{miFormulario.as_table}}
+
+            </table>
+
+            <input type="submit" value="ENVIAR">
+
+
+        </form>
+
+    {% endblock %}
